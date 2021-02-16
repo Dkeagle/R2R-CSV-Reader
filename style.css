@@ -1,0 +1,228 @@
+/***********/
+/* GENERAL */
+/***********/
+
+*, *::before, *::after{
+	margin: 0;
+	font-size: 18px;
+}
+
+@font-face {
+	font-family: "AlleyGarden";
+	src: url("aAlleyGarden.ttf");
+}
+
+body{
+	height: 100vh;
+	overflow: hidden;
+	position: relative;
+}
+
+/**************/
+/* BACKGROUND */
+/**************/
+
+.background{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	overflow: hidden;
+	background: radial-gradient(circle at bottom, #000080 0%, #000000 100%);
+}
+
+.space{
+	position: inherit;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: rgba(128, 0, 128, 0.05) center / 200px 200px round;
+	border: 1px dashed rgba(128, 0, 128, 0.3);
+}
+
+.stars1{
+	animation: space 150s ease-in-out infinite alternate;
+	background-image: 
+		radial-gradient(1.0px 1.0px at 25px 5px, #969646, rgba(255, 255, 255, 0)),
+		radial-gradient(1.0px 1.0px at 50px 25px, #140AF0, rgba(255, 255, 255, 0)),
+		radial-gradient(1.5px 1.5px at 125px 20px, #B43C1E, rgba(255, 255, 255, 0)),
+		radial-gradient(1.5px 1.5px at 50px 75px, #C8C8FF, rgba(255, 255, 255, 0)),
+		radial-gradient(2.0px 2.0px at 15px 125px, #C8C8FF, rgba(255, 255, 255, 0)),
+		radial-gradient(2.5px 2.5px at 110px 80px, #969646, rgba(255, 255, 255, 0)),
+		radial-gradient(2.5px 2.5px at 140px 5px, #B43C1E, rgba(255, 255, 255, 0))
+	;
+}
+
+.stars2{
+	animation: space 210s ease-in-out infinite alternate;
+	background-image: 
+		radial-gradient(1.0px 1.0px at 75px 125px, #969646, rgba(255, 255, 255, 0)),
+		radial-gradient(1.0px 1.0px at 100px 75px, #C8C8FF, rgba(255, 255, 255, 0)),
+		radial-gradient(1.5px 1.5px at 170px 100px, #B43C1E, rgba(255, 255, 255, 0)),
+		radial-gradient(2.0px 2.0px at 20px 15px, #969646, rgba(255, 255, 255, 0)),
+		radial-gradient(2.5px 2.5px at 165px 35px, #140AF0, rgba(255, 255, 255, 0)),
+		radial-gradient(2.5px 2.5px at 50px 135px, #B43C1E, rgba(255, 255, 255, 0)),
+		radial-gradient(2.5px 2.5px at 160px 40px, #C8C8FF, rgba(255, 255, 255, 0))
+	;
+}
+
+.stars3{
+	animation: space 270s ease-in-out infinite alternate;
+	background-image: 
+		radial-gradient(1.0px 1.0px at 10px 10px, #C8C8FF, rgba(255, 255, 255, 0)),
+		radial-gradient(1.0px 1.0px at 150px 150px, #969646, rgba(255, 255, 255, 0)),
+		radial-gradient(1.0px 1.0px at 60px 170px, #B43C1E, rgba(255, 255, 255, 0)),
+		radial-gradient(1.5px 1.5px at 175px 180px, #C8C8FF, rgba(255, 255, 255, 0)),
+		radial-gradient(1.5px 1.5px at 195px 100px, #B43C1E, rgba(255, 255, 255, 0)),
+		radial-gradient(2.0px 2.0px at 95px 145px, #969646, rgba(255, 255, 255, 0)),
+		radial-gradient(2.0px 2.0px at 85px 130px, #140AF0, rgba(255, 255, 255, 0))
+	;
+}
+
+@keyframes space {
+	40% {
+		opacity: 0.75;
+	}
+	50% {
+		opacity: 0.25;
+	}
+	60% {
+		opacity: 0.75;
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+/********/
+/* DATA */
+/********/
+
+.data{
+	position: relative;
+	width: 60vw;
+	max-height: 90%;
+	top: 50%;
+	transform: translateY(-60%);
+	margin: 0 auto;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	overflow: auto;
+}
+
+.data_item{
+	position: relative;
+	color: #FFFFFF;
+	font-family: "AlleyGarden";
+	font-size: 2.6em;
+	margin-top: 30px;
+	width: 48%;
+	text-align: center;
+	white-space: nowrap;
+}
+
+.data_item:nth-child(-n + 2){
+	width: 100%;
+}
+
+.data_item:nth-child(2){
+	margin-bottom: 30px;
+}
+
+.data_item:nth-last-child(-n + 2){
+	white-space: pre;
+}
+
+/***********/
+/* CONTROL */
+/***********/
+
+.control{
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 100vw;
+	background-color: rgba(0, 0, 0, 0.4);
+}
+
+.control_wrapper{
+	position: relative;
+	display: inline-flex;
+	width: 100%;
+	align-items: center;
+}
+
+.control_wrapper > p{
+	display: inline;
+	margin-left: 50px;
+}
+
+#line_input, #total{
+	display: inline;
+	color: #FFFFFF;
+	font-family: "AlleyGarden";
+	font-size: 2em;
+	background: none;
+	border: none;
+	padding: 0;
+}
+
+.wrapper{
+	margin: 0 auto;
+}
+
+#gtl_button, #prev_button, #next_button, #reset{
+	background: rgba(0, 0, 128, 0.3);
+	color: #ffffff;
+	font-family: sans-serif;
+	padding: 3px 10px;
+	border: 1px dashed #800080;
+	border-radius: 10%;
+	height: fit-content;
+}
+
+#gtl_button{
+	margin-left: 20px;
+}
+
+#reset{
+	margin-right: 50px;
+}
+
+button:focus, button:hover{
+	/* outline: 1px dashed #C8C8FF; */
+	outline: 0;
+	box-shadow: 0 0 0 1pt #C8C8FF
+}
+
+/*****************/
+/* MEDIA QUERIES */
+/*****************/
+
+@media only screen and (max-width: 1080px){
+	/* for mobile phones */
+	.data{
+		flex-wrap: nowrap;
+		flex-direction: column;
+		width: 100vw;
+	}
+
+	.data_item{
+		width: 90%;
+	}
+
+	.data_item:first-child{
+		margin-top: 12%;
+	}
+
+	/* .control_wrapper > p {
+		display: none;
+	} */
+
+	#gtl_button, #reset{
+		display: none;
+	}
+}

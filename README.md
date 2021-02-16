@@ -11,7 +11,5 @@ USAGE:
 - You're good to go Commander!
 
 WIP & known issues:
-- The "list.csv" file need to include the mapping value at the moment, if that value is not in the CSV file then the code will crash.
-=> Need to check the value exists before trying to read it, i'm on it!
 - The CSS might not be fully responsive on small screens / tablets / smartphones.
 => As CSS is far from my mains skills, any advice on "how to make it look good" would be appreciated! 

@@ -219,10 +219,6 @@ button:focus, button:hover{
 		margin-top: 12%;
 	}
 
-	/* .control_wrapper > p {
-		display: none;
-	} */
-
 	#gtl_button, #reset{
 		display: none;
 	}

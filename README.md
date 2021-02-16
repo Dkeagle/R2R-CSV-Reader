@@ -9,7 +9,3 @@ USAGE:
 - Download the CSV file for that route and rename it "list.csv".
 - Place the "list.csv" file in the project folder.
 - You're good to go Commander!
-
-WIP & known issues:
-- The CSS might not be fully responsive on small screens / tablets / smartphones.
-=> As CSS is far from my mains skills, any advice on "how to make it look good" would be appreciated! 

@@ -9,3 +9,9 @@ USAGE:
 - Download the CSV file for that route and rename it "list.csv".
 - Place the "list.csv" file in the project folder.
 - You're good to go Commander!
+
+WIP: 
+- User account.
+- CSV file upload and link to account.
+- Stop using the browser cache to save the location.
+- Add a switch to toggle the background animation.
